@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<main>
+
+  <div class="box-main">
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <div class="img-mob" >
+      <img src="images/hero-mobile.jpg" alt="hero-mobile">
+    </div>
+  <div class="text-big">We're <div class="text-dark">coming soon</div></div>
+
+  <div class="text-small">Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.</div>
+<form name="theForm" >
+  <div class="form">
+
+  <input type="text" placeholder="Email Address" id="email" required >
+  <div class="error-icon">
+    <img src="images/icon-error.svg" alt="error">
+  </div>
+  <a  id="submit-btn" onclick="check()">
+    <img src="images/icon-arrow.svg" alt="icon-arrow" class="submit-icon" >
+  </a>
+
+</div>
+</form>
+<div id="errors">
+  Please provide a valid email
+</div>
+</div>
+<div class="box-image">
+  <img src="images/hero-desktop.jpg" alt="image-main">
+</div>
+</main>
+</body>
+<script>
+  let email = document.getElementById("email");
+  let error = document.getElementById("error")
+  function check() {
+    let values = document.getElementById("email").value;
+    console.log('hell')
+    if(values.includes("@")== false || values.includes(".")== false){
+      errors.style.display = "flex";
+      email.style.border = "2px solid hsl(0, 93%, 68%)"
+    }
+    else{
+      errors.style.display = "none"
+      document.theForm.submit();
+    }
+  }
+</script>
+</html>
