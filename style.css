@@ -58,7 +58,7 @@ main{
     justify-content: flex-end;
 }
 .box-image > img{
-    display: flex;
+    object-fit:cover
     width: 35vw;
 }
 .text-small{
